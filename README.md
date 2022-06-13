@@ -1,0 +1,2 @@
+# data_sience_special_lecture
+データサイエンス特論2022
