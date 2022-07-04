@@ -3,25 +3,15 @@ import math
  
 import numpy as np # Numpy
 import matplotlib.pyplot as plt # 描画ライブラリ
-import matplotlib.mlab as mlab
-import matplotlib.font_manager as fm
 import matplotlib.patheffects as path_effects
 
-# # matplotlib setting
-# from matplotlib import font_manager
-# font_path='./ipaexg.ttf' # Windows の場合
-
-# font_prop = font_manager.FontProperties(fname=font_path)
-# font_prop.set_style('normal')
-# font_prop.set_weight('light')
-# font_prop.set_size('12')
-# fp2 = font_prop.copy()
-# fp2.set_size('25')
 
 # read csv
 
+print("test")
+
 rank_list = []
-with open('./rank.csv') as f:
+with open('./rank2.csv') as f:
     reader = csv.reader(f)
     for row in reader:
         row = [row[0]]+[int(r) for r in row[1:]]
@@ -79,7 +69,7 @@ for ranks in rank_list:
 plt.tick_params(labelsize=15)
 plt.xlabel('Top 20',fontsize=20)#,font_properties=fp2)
 plt.ylabel('nDCG',fontsize=20)#,font_properties=fp2)
-plt.title('Example of Image Retrieval Comparison Experiment \n of Google yahoo, yandex, Bing',fontsize=25,)#font_properties=fp2)
+plt.title('Example 2 of Image Retrieval Comparison Experiment \n of Google yahoo, yandex, Bing',fontsize=25,)#font_properties=fp2)
 
 plt.legend([r[0] for r in rank_list], loc='best', fontsize=20)
-plt.savefig('Kadai3-nDCG.pdf') # スケーラブルな PDF に出力
+plt.savefig('Kadai3-nDCG2.pdf') # スケーラブルな PDF に出力
